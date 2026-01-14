@@ -111,7 +111,7 @@ function App() {
               />
             </div>
 
-            <button className="w-full bg-orange-400 text-white font-semibold py-3 rounded-xl text-lg hover:bg-orange-500 transition shadow-md mb-8 cursor-pointer" onClick={analyseResume}>
+            <button disabled={loading} className={`w-full text-white font-semibold py-3 rounded-xl text-lg transition shadow-md ${loading ? "bg-orange-300 cursor-not-allowed" : "bg-orange-400 hover:bg-orange-500 cursor-pointer"}`} onClick={analyseResume}>
               {loading ? "Analysing..." : "Analyse Resume"}
             </button>
           </div>
@@ -166,9 +166,14 @@ function App() {
               />
             </div>
 
-            <button className="w-full bg-orange-400 text-white font-semibold py-3 rounded-xl text-lg hover:bg-orange-500 transition shadow-md cursor-pointer" onClick={analyseJDMatch}>
+            <button
+              disabled={loading_desc}
+              onClick={analyseJDMatch}
+              className={`w-full text-white font-semibold py-3 rounded-xl text-lg transition shadow-md ${loading_desc ? "bg-orange-300 cursor-not-allowed" : "bg-orange-400 hover:bg-orange-500 cursor-pointer"}`}
+            >
               {loading_desc ? "Analysing..." : "Analyse Job Description"}
             </button>
+
           </div>
 
         </div>
