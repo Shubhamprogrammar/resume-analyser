@@ -16,6 +16,7 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [loading_desc, setLoading_desc] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const HOST = import.meta.env.VITE_BACKEND_URL || "http://localhost:8000";
 
   const handleResumeChange = (type) => (e) => {
     if (e.target.files?.length) {
@@ -37,7 +38,7 @@ function App() {
       const formData = new FormData();
       formData.append("file", resumeFile);
 
-      const res = await fetch("http://localhost:8000/resume/analyze", {
+      const res = await fetch(`${HOST}/resume/analyze`, {
         method: "POST",
         body: formData,
       });
@@ -63,7 +64,7 @@ function App() {
       formData.append("file", jobResumeFile);
       formData.append("job_description", jobDescription);
 
-      const res = await fetch("http://localhost:8000/resume/jd-match", {
+      const res = await fetch(`${HOST}/resume/jd-match`, {
         method: "POST",
         body: formData,
       });
