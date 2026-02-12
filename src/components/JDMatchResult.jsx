@@ -11,7 +11,7 @@ const JDMatchResult = ({ data }) => {
 
   return (
     <div className="mt-8 bg-white p-6 rounded-xl shadow">
-      <h2 className="text-xl font-bold text-orange-500 mb-4">
+      <h2 className="text-xl font-bold text-indigo-500 mb-4">
         JD Match Result
       </h2>
 
@@ -58,7 +58,7 @@ const JDMatchResult = ({ data }) => {
         </ul>
       </div>
 
-      <div className="mt-6 bg-orange-50 p-4 rounded">
+      <div className="mt-6 bg-indigo-50 p-4 rounded">
         <h3 className="font-semibold">Hiring Recommendation</h3>
         <p>{gpt.final_hiring_recommendation}</p>
       </div>

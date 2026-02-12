@@ -12,7 +12,7 @@ const ResumeResult = ({ data }) => {
   return (
     <div className="mt-8 bg-white p-6 rounded-xl shadow space-y-8">
 
-      <h2 className="text-2xl font-bold text-orange-500">
+      <h2 className="text-2xl font-bold text-indigo-500">
         Resume Analysis
       </h2>
 
@@ -80,7 +80,7 @@ const ResumeResult = ({ data }) => {
 
       {/* Experience Improvements */}
       <div>
-        <h3 className="font-bold text-lg text-orange-600">
+        <h3 className="font-bold text-lg text-indigo-600">
           Experience Improvements
         </h3>
 
@@ -91,7 +91,7 @@ const ResumeResult = ({ data }) => {
           </p>
         ) : (
           gpt.experience_improvements.map((exp, i) => (
-            <div key={i} className="mt-4 border-l-4 border-orange-400 pl-4">
+            <div key={i} className="mt-4 border-l-4 border-indigo-400 pl-4">
               <p className="font-semibold">
                 {exp.role} @ {exp.company}
               </p>
@@ -107,7 +107,7 @@ const ResumeResult = ({ data }) => {
 
       {/* Project Improvements */}
       <div>
-        <h3 className="font-bold text-lg text-orange-600">
+        <h3 className="font-bold text-lg text-indigo-600">
           Project Improvements
         </h3>
 
@@ -145,7 +145,7 @@ const ResumeResult = ({ data }) => {
       )}
 
       {/* Final Recommendation */}
-      <div className="bg-orange-50 p-4 rounded">
+      <div className="bg-indigo-50 p-4 rounded">
         <h3 className="font-bold">Overall Recommendation</h3>
         <p>{gpt.overall_recommendation}</p>
       </div>

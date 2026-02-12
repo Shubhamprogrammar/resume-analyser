@@ -82,9 +82,9 @@ function App() {
 
   return (
     <>
-      <div className="w-full p-4 md:p-8 bg-gradient-to-b from-orange-100 to-orange-50">
+      <div className="min-h-screen w-full p-4 md:p-8 bg-gradient-to-b from-indigo-200 to-indigo-100">
 
-        <h2 className="text-center font-bold text-3xl text-orange-500 mb-6">
+        <h2 className="text-center font-bold text-3xl text-indigo-500 mb-6">
           Resume Analyzer
         </h2>
 
@@ -93,13 +93,13 @@ function App() {
           {/* Resume Only */}
           <div className="mt-5 md:me-5">
             <div className="mb-6">
-              <label className="block text-gray-700 font-semibold mb-2">
+              <label className="block text-indigo-700 font-semibold mb-2">
                 Upload Resume
               </label>
 
               <label
                 htmlFor="resume-file"
-                className={`block w-full border-2 border-dashed rounded-lg p-4 text-gray-600 cursor-pointer text-center hover:bg-orange-50 transition ${resumeFile ? "border-green-400" : "border-orange-300"}`}
+                className={`block w-full border-2 border-dashed rounded-lg p-4 text-indigo-600 cursor-pointer text-center hover:bg-indigo-50 transition ${resumeFile ? "border-green-400" : "border-indigo-300"}`}
               >
                 {resumeFileName || "Click to upload resume"}
               </label>
@@ -112,7 +112,7 @@ function App() {
               />
             </div>
 
-            <button disabled={loading} className={`w-full text-white font-semibold py-3 rounded-xl text-lg transition shadow-md ${loading ? "bg-orange-300 cursor-not-allowed" : "bg-orange-400 hover:bg-orange-500 cursor-pointer"}`} onClick={analyseResume}>
+            <button disabled={loading} className={`w-full text-white font-semibold py-3 rounded-xl text-lg transition shadow-md ${loading ? "bg-indigo-300 cursor-not-allowed" : "bg-indigo-400 hover:bg-indigo-500 cursor-pointer"}`} onClick={analyseResume}>
               {loading ? "Analysing..." : "Analyse Resume"}
             </button>
           </div>
@@ -120,28 +120,28 @@ function App() {
           {/* Divider */}
           <div className="flex items-center justify-center">
             <div className="flex w-full items-center md:hidden">
-              <hr className="flex-grow border-gray-300" />
-              <span className="px-3 text-gray-500 font-semibold">OR</span>
-              <hr className="flex-grow border-gray-300" />
+              <hr className="flex-grow border-indigo-300" />
+              <span className="px-3 text-indigo-500 font-semibold">OR</span>
+              <hr className="flex-grow border-indigo-300" />
             </div>
 
             <div className="hidden md:flex flex-col items-center h-full">
-              <hr className="w-px h-64 bg-gray-300 border-0" />
-              <span className="py-3 text-gray-500 font-semibold">OR</span>
-              <hr className="w-px h-64 bg-gray-300 border-0" />
+              <hr className="w-px h-64 bg-indigo-300 border-0" />
+              <span className="py-3 text-indigo-500 font-semibold">OR</span>
+              <hr className="w-px h-64 bg-indigo-300 border-0" />
             </div>
           </div>
 
           {/* Resume + JD */}
           <div className="mt-5 md:ml-5">
             <div className="mb-6">
-              <label className="block text-gray-700 font-semibold mb-2">
+              <label className="block text-indigo-700 font-semibold mb-2">
                 Upload Resume
               </label>
 
               <label
                 htmlFor="job-resume-file"
-                className={`block w-full border-2 border-dashed rounded-lg p-4 text-gray-600 cursor-pointer text-center hover:bg-orange-50 transition ${jobResumeFile ? "border-green-400" : "border-orange-300"}`}
+                className={`block w-full border-2 border-dashed rounded-lg p-4 text-indigo-600 cursor-pointer text-center hover:bg-indigo-50 transition ${jobResumeFile ? "border-green-400" : "border-indigo-300"}`}
               >
                 {jobResumeFileName || "Click to upload resume"}
               </label>
@@ -155,7 +155,7 @@ function App() {
             </div>
 
             <div className="mb-6">
-              <label className="block text-gray-700 font-semibold mb-2">
+              <label className="block text-indigo-700 font-semibold mb-2">
                 Paste Job Description
               </label>
               <textarea
@@ -163,14 +163,14 @@ function App() {
                 value={jobDescription}
                 onChange={(e) => setJobDescription(e.target.value)}
                 placeholder="Paste job description here..."
-                className="w-full border-2 border-orange-300 rounded-lg p-4 resize-none focus:outline-none focus:ring-2 focus:ring-orange-400"
+                className="w-full border-2 border-indigo-300 rounded-lg p-4 resize-none focus:outline-none focus:ring-2 focus:ring-indigo-400"
               />
             </div>
 
             <button
               disabled={loading_desc}
               onClick={analyseJDMatch}
-              className={`w-full text-white font-semibold py-3 rounded-xl text-lg transition shadow-md ${loading_desc ? "bg-orange-300 cursor-not-allowed" : "bg-orange-400 hover:bg-orange-500 cursor-pointer"}`}
+              className={`w-full text-white font-semibold py-3 rounded-xl text-lg transition shadow-md ${loading_desc ? "bg-indigo-300 cursor-not-allowed" : "bg-indigo-400 hover:bg-indigo-500 cursor-pointer"}`}
             >
               {loading_desc ? "Analysing..." : "Analyse Job Description"}
             </button>
