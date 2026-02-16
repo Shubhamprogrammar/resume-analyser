@@ -35,7 +35,6 @@ The application is built with **React.js** to provide a smooth, responsive, and 
 | **Tailwind CSS** | UI Styling                            |
 | **REST API Backend**   | Resume Processing & Analysis          |
 | **Axios**              | API communication                     |
-| **REST API Backend**   | Property & User Data *(linked below)* |
 
 ## 🔗 Backend Repository
 
